@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <img src="assets/post.png" alt="Logo" class="logo">
+                    </div>
+                    <form [formGroup]="formLogin" (ngSubmit)="handleLogin()">
+                        <div class="mb-4">
+                            <label for="email" class="form-label text-uppercase fw-bold">Adresse Email</label>
+                            
+                                <input type="email" id="email" class="form-control border-start-1" formControlName="email" required>
+                            
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label text-uppercase fw-bold">Mot de passe</label>
+                            
+                                <input type="password" id="password" class="form-control border-start-1" formControlName="password" required>
+                           
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-orange btn-lg btn-wide py-2">Se Connecter</button>
+                        </div>
+                    </form>
+                    <div class="orange-line my-3"></div>
+                    <div class="text-center">
+                        <a href="#" class="text-decoration-none text-orange fw-bold">Mot de passe oublié ?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg-orange {
+        background-color: orange;
+    }
+    .btn-orange {
+        background-color: orange;
+        color: white;
+    }
+    .btn-wide {
+        width: 100%;
+    }
+    .orange-line {
+        width: 100%;
+        height: 2px;
+        background-color: orange;
+        margin-top: 3px;
+    }
+    .logo {
+        max-width: 100px;
+        margin-bottom: 20px;
+    }
+    .text-orange {
+        color: orange;
+    }
+    
+</style>

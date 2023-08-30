@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+  .btn-darkblue {
+    background-color: #00008B; /* Remplacez cette valeur par le code de la couleur bleu foncé de votre choix */
+    color: white; /* Pour rendre le texte en blanc, afin qu'il soit lisible sur le bouton bleu foncé */
+  }
+  mat-icon {
+    font-size: 20px;
+  }

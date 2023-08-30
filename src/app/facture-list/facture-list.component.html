@@ -1,0 +1,30 @@
+<p></p>
+
+  
+
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div style="text-align: center; padding-top: 20px;">
+      <p style="font-size: 26px; font-weight: bold;">Télécharger votre facture facilement!</p>
+      <img src="assets/invoice.png" alt="Image" style="max-width: 100%; margin-top: 20px;">
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <mat-form-field>
+      <mat-label>Sélectionner la date</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Start date" [(ngModel)]="startDate"
+               [ngModelOptions]="{updateOn: 'blur'}"
+               (ngModelChange)="updateStartDate($event)">
+        <input matEndDate placeholder="End date" [(ngModel)]="endDate"
+               [ngModelOptions]="{updateOn: 'blur'}"
+               (ngModelChange)="updateEndDate($event)">
+      </mat-date-range-input>
+
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="downloadPDF()">Download</button>
+  
+</div>
